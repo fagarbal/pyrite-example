@@ -1,0 +1,33 @@
+{
+  "name": "pyrite-example",
+  "version": "0.0.1",
+  "description": "Dependencies:",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --hot --inline --history-api-fallback",
+    "dist": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fagarbal/pyrite-example.git"
+  },
+  "author": "Fabio Garcia",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.5",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "pyrite": "^0.9.1",
+    "pyrite-server": "0.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/fagarbal/pyrite-example/issues"
+  },
+  "homepage": "https://github.com/fagarbal/pyrite-example#readme"
+}
