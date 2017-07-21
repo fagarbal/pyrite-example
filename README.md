@@ -8,6 +8,7 @@ Installation:
 
 - npm install 
 
-Run:
+Run dev:
 
+- /server npm start
 - npm run dev

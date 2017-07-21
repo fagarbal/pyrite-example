@@ -28,7 +28,7 @@ module.exports = {
 	module: {
 		loaders: [{
 			test: /.jsx?$/,
-			exclude: /node_modules/,
+			include: [/..\/pyritejs/, /node_modules\/pyrite/, /public/],
 			loader: 'babel-loader',
 			query: {
 				cacheDirectory: true,
@@ -43,13 +43,5 @@ module.exports = {
 			loaders: ['html-loader?config=htmlConfig'],
 			exclude: [path.resolve(__dirname, 'public/index.html')],
 		}]
-	},
-
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false
-			}
-		})
-	]
+	}
 }
