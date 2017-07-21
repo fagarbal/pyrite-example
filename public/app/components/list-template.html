@@ -1,6 +1,9 @@
 <h1>${this.props.title}</h1>
-${this.state.notes}
+${this.state.notes.join('\n')}
+<br/>
+<br/>
 
-note : <input type="text" py-input="{(event) => this.state.note = event.target.value}">
+<span>note : </span>
+<input type="text" py-input="{(event) => this.state.note = event.target.value}">
 
 <button py-click="{this.addNote.bind(this)}">Add</button>

@@ -1,6 +1,6 @@
-import emit from '../../pyritejs-backend/lib/emit';
+import emit from 'pyrite-server/lib/emit';
 
-class Notes {
+export default class Notes {
 	constructor() {
 		this.notes = [1, 2, 3];
 	}
@@ -16,5 +16,3 @@ class Notes {
 		return note;
 	}
 }
-
-module.exports = Notes;

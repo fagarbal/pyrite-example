@@ -1,4 +1,4 @@
-import pyriteServer from '../../pyritejs-backend/';
+import pyriteServer from 'pyrite-server';
 import Notes from './notes';
 
 pyriteServer
