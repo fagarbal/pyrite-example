@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "webpack",
-    "start": "concurrently --kill-others \"webpack-dev-server --hot --inline --history-api-fallback\" \"nodemon server/index.js --exec babel-node\""
+    "dev": "concurrently --kill-others \"webpack-dev-server --hot --inline --history-api-fallback\" \"nodemon server/index.js --exec babel-node\"",
+    "start": "webpack && STATIC_FOLDER=\"/../dist\" babel-node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,7 @@
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.5",
     "pyrite": "^0.9.5",
-    "pyrite-server": "0.0.4",
+    "pyrite-server": "0.0.5",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },

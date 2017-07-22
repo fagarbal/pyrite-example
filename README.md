@@ -16,5 +16,11 @@ npm install
 Run
 
 ```
+npm run dev
+```
+
+Run Production
+
+```
 npm start
 ```

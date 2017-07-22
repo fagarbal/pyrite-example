@@ -3,4 +3,4 @@ import Notes from './notes';
 
 pyriteServer
 .add(Notes)
-.listen(4000);
+.listen(process.env.PORT || 4000, process.env.STATIC_FOLDER  ? __dirname + process.env.STATIC_FOLDER : '');
