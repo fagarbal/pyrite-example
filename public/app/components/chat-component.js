@@ -22,8 +22,8 @@ export default class Chat extends Component {
 
 		this.rpc.Notes.on.addNote((note) => {
 			this.state.notes.push(note);
-			
-			if (this.state.notes > 20)
+
+			if (this.state.notes.length > 20)
 				this.state.notes.shift();
 
 			this.refs.chat.scrollTop = this.refs.chat.scrollHeight;
