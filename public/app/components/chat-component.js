@@ -27,7 +27,13 @@ export default class Chat extends Component {
 		});
 	}
 
-	addNote(event) {		
+	onKeyPress(event) {
+		if (event.keyCode === 13) {
+			this.addNote();
+		}
+	}
+
+	addNote() {		
 		this.rpc.Notes.addNote({
 			msg: this.state.note,
 			nick: this.state.nick

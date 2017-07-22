@@ -20,7 +20,7 @@
 			<div class="form-group">
 				<label>Comment</label>
 				<div class="input-group input-group-lg">
-				  <input type="text" class="form-control" placeholder="Write a comment..." py-input="{(event) => this.state.note = event.target.value}" value="${this.state.note}">
+				  <input type="text" class="form-control" placeholder="Write a comment..." py-input="{(event) => this.state.note = event.target.value}" py-keypress="{this.onKeyPress.bind(this)}" value="${this.state.note}">
 				  <span class="input-group-btn">
 				    <button ${(!this.state.nick || !this.state.note) ? 'disabled' : ''} class="btn btn-primary" type="button" py-click="{this.addNote.bind(this)}">send!</button>
 				  </span>
