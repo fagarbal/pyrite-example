@@ -43,5 +43,9 @@ module.exports = {
 			loaders: ['html-loader?config=htmlConfig'],
 			exclude: [path.resolve(__dirname, 'public/index.html')],
 		}]
-	}
+	},
+
+	plugins: [
+		new webpack.DefinePlugin({'process.env.PORT': process.env.PORT})
+	]
 }
