@@ -1,11 +1,16 @@
-import { Component, Template, State } from 'pyrite';
+import { Component, Template, State, sanitize } from 'pyrite';
 import template from './chat-template.html';
 
-@Template(template)
+@Template(template, {
+	note: (controller, note) => sanitize`
+		<p>${note.nick}</p>
+		<div class="alert alert-${controller.state.nick === note.nick ? 'warning' : 'info'}" role="alert">
+		  <p style="word-break: break-all;">${note.msg}</p>
+		</div>
+	`
+})
 @State({
-	notes: [],
-	note: '',
-	nick: ''
+	notes: []
 })
 export default class Chat extends Component {
 	onLoad() {
@@ -22,10 +27,12 @@ export default class Chat extends Component {
 		});
 	}
 
-	addNote() {		
+	addNote(event) {		
 		this.rpc.Notes.addNote({
 			msg: this.state.note,
 			nick: this.state.nick
 		});
+
+		this.state.note = '';
 	}
 };
