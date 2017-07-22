@@ -1,0 +1,36 @@
+<div class="container col-xs-offset-2" style="margin-top: 100px">
+	<div class="row">
+		<div class="col-xs-offset-6">
+			<h1>Chat</h1>
+		</div>
+		<div class="col-xs-3">
+			<div class="form-group">
+				<label>Nickname</label>
+				<div class="input-group input-group-lg">
+				  <input type="text" class="form-control" placeholder="Nickname..." py-input="{(event) => this.state.nick = event.target.value}" value="${this.state.nick}">
+				</div>
+			</div>
+		</div>
+		<div ref="chat" class="col-xs-6" style="height: 500px; overflow-y: auto">
+			${this.state.notes.map((note) => sanitize`
+				<p>${note.nick}</p>
+				<div class="alert alert-${this.state.nick === note.nick ? 'warning' : 'info'}" role="alert">
+				  <p style="word-break: break-all;">${note.msg}</p>
+				</div>
+			`)}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-3">
+			<div class="form-group">
+				<label>Comment</label>
+				<div class="input-group input-group-lg">
+				  <input type="text" class="form-control" placeholder="Write a comment..." py-input="{(event) => this.state.note = event.target.value}" value="${this.state.note}">
+				  <span class="input-group-btn">
+				    <button ${(!this.state.nick || !this.state.note) ? 'disabled' : ''} class="btn btn-primary" type="button" py-click="{this.addNote.bind(this)}">send!</button>
+				  </span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

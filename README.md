@@ -6,9 +6,15 @@ Dependencies:
 
 Installation:
 
-- npm install 
+```
+npm install -g babel-node
+npm install -g nodemon
+npm install -g webpack-dev-server
+npm install 
+``
 
-Run dev:
+Run
 
-- /server npm start
-- npm run dev
+```
+npm start
+```

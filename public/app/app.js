@@ -1,7 +1,7 @@
-import { Core } from 'pyrite';
-import List from './components/list-component';
+import { pyrite } from 'pyrite';
+import Chat from './components/chat-component';
 
-Core
+pyrite
 .server('localhost:4000')
-.add(List, 'List')
-.run('list-app');
+.add(Chat, 'Chat')
+.run('chat-app');
