@@ -9,7 +9,7 @@ export default class Notes {
 	}
 
 	getNotes() {
-		return this.notes.slice(0, 20);
+		return this.notes.slice(this.notes.length -20, 20);
 	}
 
 	@emit

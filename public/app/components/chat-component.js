@@ -22,7 +22,7 @@ export default class Chat extends Component {
 
 		this.rpc.Notes.on.addNote((note) => {
 			this.state.notes.push(note);
-			this.state.notes = this.state.notes.slice(0, 20);
+			this.state.notes = this.state.notes.slice(this.state.notes.length - 20, 20);
 			this.refs.chat.scrollTop = this.refs.chat.scrollHeight;
 		});
 	}
