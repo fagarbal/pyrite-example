@@ -10,7 +10,8 @@ import template from './chat-template.html';
 	`
 })
 @State({
-	notes: []
+	notes: [],
+	nick: 'Anonymous'
 })
 export default class Chat extends Component {
 	onLoad() {

@@ -1,7 +1,7 @@
 <div class="container col-md-offset-2">
 	<div class="row">
 		<div class="col-xs-12">
-			<h1>Chat</h1>
+			<h1 style="text-align: center;">Chat</h1>
 		</div>
 		<div class="col-md-3">
 			<div class="form-group">
@@ -11,7 +11,7 @@
 				</div>
 			</div>
 		</div>
-		<div ref="chat" class="col-md-6" style="height: 450px; overflow-y: auto">
+		<div ref="chat" class="col-md-6" style="height: 330px; overflow-y: auto">
 			${this.state.notes.map((note) => this.templates.note(this, note))}
 		</div>
 	</div>
