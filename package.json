@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "webpack",
     "dev": "concurrently --kill-others \"webpack-dev-server --hot --inline --history-api-fallback\" \"nodemon server/index.js --exec babel-node\"",
-    "start": "webpack && STATIC_FOLDER=\"/../dist\" babel-node server/index.js"
+    "start": "./node_modules/.bin/webpack && STATIC_FOLDER=\"/../dist\" ./node_modules/.bin/babel-node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   "author": "Fabio Garcia",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
