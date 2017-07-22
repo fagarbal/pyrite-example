@@ -1,7 +1,9 @@
 import { pyrite } from 'pyrite';
 import Chat from './components/chat-component';
 
+let host = process.env.HOST ? process.env.HOST : 'localhost:4000';
+
 pyrite
-.server((process.env.HOST || 'localhost' ) + ':' + (process.env.PORT || 4000))
+.server(host)
 .add(Chat, 'Chat')
 .run('chat-app');
